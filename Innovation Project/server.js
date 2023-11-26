@@ -29,14 +29,14 @@ app.get('/data2', (req, res) => {
  
     res.json({tempo:tempo}); // pass the data variable as the argument
   });
-app.get("/player", (req, res) => {
+app.get("/musician", (req, res) => {
     
     waitForCondition(function() {
         // Check if the start variable is equal to 1
         return start == 1;
     },function(){
         // This will only execute when the start variable is equal to 1
-        res.sendFile(__dirname + "/player.html");
+        res.sendFile(__dirname + "/musician.html");
     });
     
 });
